@@ -39,7 +39,7 @@ class SubmitcodeView(View):
         code_string = interaction.message.content  # Retrieve the entered code string from the message content
         if code_string and code_string.strip():
             if code_string in existing_list:
-                role = discord.utils.get(member.guild.roles, name='OKX Winner')  # Replace with the name of the role you want to assign
+                role = discord.utils.get(member.guild.roles, name='ROLE HERE')  # Replace with the name of the role you want to assign
                 if role:
                     await member.add_roles(role)
                     await interaction.response.send_message("You have been assigned the role.", ephemeral=True)
@@ -53,7 +53,7 @@ class SubmitcodeView(View):
 @bot.event
 async def on_ready():
     print('Bot is ready!')
-    channel = bot.get_channel(1127715233557917796)  # Replace with the ID of the desired channel
+    channel = bot.get_channel(CHANNEL HERE)  # Replace with the ID of the desired channel
     if channel:
         view = SubmitcodeView()
         await channel.send("Click the button below to submit your code:", view=view)
@@ -73,4 +73,4 @@ async def on_interaction(interaction: discord.Interaction):
         await interaction.component.callback(interaction)
 
                 
-bot.run('MTEyNzcwOTk3ODk3MTYwNzE0MA.GQlIrf.jq4CqH7duG_2YjJBOawQsJmyJb4od5OJyMYDi4')
+bot.run('TOKEN HERE')
