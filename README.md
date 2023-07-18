@@ -24,7 +24,8 @@ This repository contains a Discord bot written in Python that allows users to su
 
 1. Run the bot by executing the following command:
 
-python bot.py
+   ```bash
+   python bot.py
 
 2. The bot will print "Bot is ready!" once it has successfully connected to Discord.
 
@@ -35,13 +36,13 @@ python bot.py
 5. If the code string is valid and exists in the existing list (loaded from the **code_list.txt** file), the user will be assigned the specified role. Otherwise, an appropriate message will be sent.
 
 ## Customization
-If you want to modify the command prefix, change the value assigned to the **command_prefix** variable in the following line:
+1. If you want to modify the command prefix, change the value assigned to the **command_prefix** variable in the following line:
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-To customize the appearance and behavior of the button, you can modify the SubmitcodeView class. This class represents the view with the button displayed in the code submission message. You can change the button label, style, and other properties according to your requirements.
+2. To customize the appearance and behavior of the button, you can modify the SubmitcodeView class. This class represents the view with the button displayed in the code submission message. You can change the button label, style, and other properties according to your requirements.
 
-To modify the existing code list, update the **code_list.txt** file with the desired code strings. Each code should be on a separate line.
+3. To modify the existing code list, update the **code_list.txt** file with the desired code strings. Each code should be on a separate line.
 
 ## Contributing
 Contributions to this project are welcome. If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request.
