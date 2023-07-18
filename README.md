@@ -13,37 +13,38 @@ This repository contains a Discord bot written in Python that allows users to su
 
    ```bash
    pip install -r requirements.txt
-Replace the placeholders in the code with the appropriate values:
+   
+1. Replace the placeholders in the code with the appropriate values:
 
-ENTER CHANNEL NUMBER - Replace with the ID of the desired channel where the bot will send the code submission message.
-ROLE NAME - Replace with the name of the role you want to assign to users with valid code strings.
-ENTER TOKEN - Replace with your Discord bot token. You can obtain this token by creating a new bot on the Discord Developer Portal.
-Usage
-Run the bot by executing the following command:
+**ENTER CHANNEL NUMBER** - Replace with the ID of the desired channel where the bot will send the code submission message.
+**ROLE NAME** - Replace with the name of the role you want to assign to users with valid code strings.
+**ENTER TOKEN** - Replace with your Discord bot token. You can obtain this token by creating a new bot on the Discord Developer Portal.
 
-bash
-Copy code
+## Usage
+
+1. Run the bot by executing the following command:
+
 python bot.py
-The bot will print "Bot is ready!" once it has successfully connected to Discord.
 
-In the specified channel, the bot will send a message with a button labeled "Submit Code". Users can click this button to initiate the code submission process.
+2. The bot will print "Bot is ready!" once it has successfully connected to Discord.
 
-After clicking the button, the bot will prompt the user to enter their code.
+3. In the specified channel, the bot will send a message with a button labeled "Submit Code". Users can click this button to initiate the code submission process.
 
-If the code string is valid and exists in the existing list (loaded from the code_list.txt file), the user will be assigned the specified role. Otherwise, an appropriate message will be sent.
+4. After clicking the button, the bot will prompt the user to enter their code.
 
-Customization
-If you want to modify the command prefix, change the value assigned to the command_prefix variable in the following line:
+5. If the code string is valid and exists in the existing list (loaded from the **code_list.txt** file), the user will be assigned the specified role. Otherwise, an appropriate message will be sent.
 
-python
-Copy code
+## Customization
+If you want to modify the command prefix, change the value assigned to the **command_prefix** variable in the following line:
+
 bot = commands.Bot(command_prefix='!', intents=intents)
+
 To customize the appearance and behavior of the button, you can modify the SubmitcodeView class. This class represents the view with the button displayed in the code submission message. You can change the button label, style, and other properties according to your requirements.
 
-To modify the existing code list, update the code_list.txt file with the desired code strings. Each code should be on a separate line.
+To modify the existing code list, update the **code_list.txt** file with the desired code strings. Each code should be on a separate line.
 
-Contributing
+## Contributing
 Contributions to this project are welcome. If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
-License
+## License
 This project is licensed under the MIT License. Feel free to use, modify, and distribute the code as per the terms of this license.
