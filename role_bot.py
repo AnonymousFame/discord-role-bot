@@ -52,7 +52,7 @@ class SubmitcodeView(View):
   async def submit_code(self, interaction: nextcord.Interaction):
     member = interaction.user
     form = nextcord.ui.Modal(f'Form for {interaction.user}')
-    frm = nextcord.ui.TextInput(label="Enter you wallet address",
+    frm = nextcord.ui.TextInput(label="Enter your code",
                                 placeholder="Your code:",
                                 style=nextcord.TextInputStyle.paragraph)
     form.add_item(frm)
