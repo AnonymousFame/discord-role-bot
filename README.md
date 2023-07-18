@@ -17,8 +17,11 @@ This repository contains a Discord bot written in Python that allows users to su
 1. Replace the placeholders in the code with the appropriate values:
 
 **ENTER CHANNEL NUMBER** - Replace with the ID of the desired channel where the bot will send the code submission message.
+
 **ROLE NAME** - Replace with the name of the role you want to assign to users with valid code strings.
+
 **ENTER TOKEN** - Replace with your Discord bot token. You can obtain this token by creating a new bot on the Discord Developer Portal.
+
 
 ## Usage
 
